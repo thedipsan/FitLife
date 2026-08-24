@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".My_Workout">
+
+<!--    Header    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:padding="16dp"
+        android:background="@color/primary"
+        >
+
+      <ImageView
+          android:id="@+id/btnBack"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/ic_backarrow"
+          android:contentDescription="BackButton"
+          android:scaleType="fitCenter"
+          />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="My Workout"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+/>
+    </LinearLayout>
+
+
+<!--     Search  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:background="@drawable/edittext_background"
+
+        >
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="Search"
+            android:src="@drawable/ic_search"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:hint="Search Workout..."
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+
+
+<!--    Workout   List -->
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:clipToPadding="false"
+    />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fabCreateWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:contentDescription="Create Workout"
+        android:src="@drawable/ic_add_button"
+        app:backgroundTint="@color/primary"
+        app:tint="@color/white" />
+
+</LinearLayout>
