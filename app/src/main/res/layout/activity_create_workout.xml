@@ -1,10 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Create_Workout">
+    android:background="#F5F7F8">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+
+        <!-- Header -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@color/primary">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_backarrow"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Create Workout"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="42dp"
+                android:layout_height="42dp" />
+
+        </LinearLayout>
+
+
+        <!-- Workout Name -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Workout Name"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#333333" />
+
+        <EditText
+            android:id="@+id/etWorkoutName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="6dp"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:hint="Upper Body Strength"
+            android:background="@drawable/edittext_background"
+            android:singleLine="true" />
+
+
+        <!-- Category -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:text="Category"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#333333" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/edittext_background" />
+
+
+        <!-- Duration -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="14dp"
+            android:text="Duration (minutes)"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="#333333" />
+
+        <EditText
+            android:id="@+id/etDuration"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="6dp"
+            android:paddingStart="14dp"
+            android:hint="45"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:singleLine="true" />
+
+
+        <!-- Exercises -->
+
+        <TextView
+            android:id="@+id/tvExerciseTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:text="Exercises (0)"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#171717" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExercises"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+
+        <!-- Add Exercise -->
+
+        <TextView
+            android:id="@+id/tvAddExercise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:text="+ Add Exercise"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:padding="10dp" />
+
+
+        <!-- Save Workout -->
+
+        <Button
+            android:id="@+id/btnSaveWorkout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Save Workout"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/primary" />
+
+    </LinearLayout>
+
+</ScrollView>
